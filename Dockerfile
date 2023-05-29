@@ -16,14 +16,18 @@ COPY . .
 # Build the React app for production
 RUN npm run build
 
-FROM nginx:stable-alpine
+# Use an official NGINX image as the base
+FROM nginx:1.21.0-alpine
 
-COPY --from=build /app/build /usr/share/nginx/html/
+# Copy the built React app from the previous stage
+COPY --from=build /app/build /usr/share/nginx/html
 
 COPY --from=build /app/nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80 for the NGINX server
 EXPOSE 80
 
-EXPOSE 3001
+# Start NGINX server when the container starts
+CMD ["nginx", "-g", "daemon off;"]
 
-CMD [ "nginx","-g","daemon off;" ]
 
