@@ -1,0 +1,68 @@
+.container-form{
+      background-color: white;
+      height: 600px;
+      width: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 10px;
+      display:grid;
+      justify-content: center;
+      align-items: center;
+      }
+   .icons{
+    position: absolute;
+    background: rgb(255, 255, 255);
+    width: 400px;
+    height: 74px;
+    top:400px;
+ display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:200
+
+  }
+  .container-second{
+   background: #3e3be4;
+   width: 300px;
+   height: 200px;
+   transform: rotate(200deg);
+   position: relative;
+   left:-50px;
+   border-radius: 5px;
+  }
+  .container-third{
+   background: rgb(191 71 176);
+   width: 300px;
+   height: 200px;
+   transform: rotate(384deg);
+   position: relative;
+   left: 1023px;
+   top: 128px;
+   border-radius: 5px;
+  }
+  .container-five{
+   background: rgb(203 90 205);
+   width: 250px;
+   height: 250px;
+   transform: rotate(-16deg);
+   position: absolute;
+   left: 1061px;
+   top: -119px;
+   border-radius: 50%
+  }
+  .container-fourth{
+   background: rgb(47, 87, 196);
+   width: 250px;
+   height: 250px;
+   transform: rotate(-16deg);
+   position: absolute;
+   top: 342px;
+   left: -98px;
+   border-radius: 50%}
+   body {
+      background: linear-gradient(to right, #7f7df7 0%, #f883df 60%, #99418a 100%);
+      position: relative;
+      height: 100vh;
+    }
