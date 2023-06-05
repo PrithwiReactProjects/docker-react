@@ -5,14 +5,13 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/r4p8v1i2
-  build:
+      - aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 143998996404.dkr.ecr.us-east-2.amazonaws.com
     commands:
       - echo Building Docker image...
-      - docker build -t gturyuety .
+      - docker build -t react-app-demo-334 .
       - echo Pushing Docker image to ECR...
-      - docker tag gturyuety:latest public.ecr.aws/r4p8v1i2/gturyuety:latest
-      - docker push public.ecr.aws/r4p8v1i2/gturyuety:latest
+      - docker tag react-app-demo-334:latest 143998996404.dkr.ecr.us-east-2.amazonaws.com/react-app-demo-334:latest
+      - docker push 143998996404.dkr.ecr.us-east-2.amazonaws.com/react-app-demo-334:latest
   post_build:
     commands:
       - echo Generating artifact...
