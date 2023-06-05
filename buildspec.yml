@@ -10,8 +10,8 @@ phases:
       - echo Building Docker image...
       - docker build -t react-app-demo-334 .
       - echo Pushing Docker image to ECR...
-      - docker tag react-app-demo-334:latest 143998996404.dkr.ecr.us-east-2.amazonaws.com/react-app-demo-334:latest
-      - docker push 143998996404.dkr.ecr.us-east-2.amazonaws.com/react-app-demo-334:latest
+      - docker tag react-app-demo-334:latest 143998996404.dkr.ecr.us-east-2.amazonaws.com/react-app-demo-334:friday
+      - docker push 143998996404.dkr.ecr.us-east-2.amazonaws.com/react-app-demo-334:friday
   post_build:
     commands:
       - echo Generating artifact...
