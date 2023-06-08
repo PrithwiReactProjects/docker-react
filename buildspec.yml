@@ -22,4 +22,4 @@ phases:
       - printf '[{"name":"loginapp-file","imageUri":"143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp"}]' > imagedefinitions.json
 artifacts:
  files:
- - imageDetail.json
+ - imagedefinitions.json
