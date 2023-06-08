@@ -16,8 +16,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - echo Pushing the Docker images...
-      - docker push 143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp
       - echo Writing image definitions file...
       - printf '[{"name":"loginapp-file","imageUri":"143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp"}]' > imagedefinitions.json
 artifacts:
