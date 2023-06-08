@@ -19,6 +19,6 @@ phases:
       - echo Pushing the Docker images...
       - docker push 143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp
       - echo Writing image definitions file...
-      - printf '[{"name":"server","imageUri":"143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp"}]' > imagedefinitions.json
+      - printf '[{"name":"loginapp-file","imageUri":"143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp"}]' > imagedefinitions.json
 artifacts:
  files: imagedefinitions.json
