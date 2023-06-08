@@ -20,5 +20,5 @@ phases:
       - docker push 143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp
       - echo Writing image definitions file...
       - printf '[{"name":"hello-world","imageUri":"%s"}]' 143998996404.dkr.ecr.us-east-2.amazonaws.com/myapplogin:loginapp > imagedefinitions.json
-  artifacts:
+artifacts:
     files: imagedefinitions.json
